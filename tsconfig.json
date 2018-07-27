@@ -1,0 +1,42 @@
+{
+    "compilerOptions": {
+      "target": "es6",
+      "module": "esnext",
+      "moduleResolution": "node",
+      "outDir": "dist",
+      "baseUrl": "src",
+      "strict": true,
+      "jsx": "preserve",
+      "jsxFactory": "Taro.createElement",
+      "experimentalDecorators": true,
+      "emitDecoratorMetadata": true,
+      "noEmitHelpers": true, // 这两者
+      "importHelpers": true, // 配合使用helper函数
+      "isolatedModules": false,
+      // "noImplicitAny": true,
+      "noImplicitAny": false,
+      "noImplicitThis": true,
+      "noImplicitUseStrict": false, // 模块输出中不包含'use strict'指令
+      "removeComments": false,
+      "strictPropertyInitialization": false,
+      "suppressImplicitAnyIndexErrors": true,
+      "esModuleInterop": true,
+      "allowSyntheticDefaultImports": true, // 允许从没有设置默认导出的模块中默认导入。这并不影响代码的显示，仅为了类型检查。
+      "alwaysStrict": true, // 以严格模式解析并为每个源文件生成"use strict"语句
+      "skipLibCheck": false, // 忽略所有的声明文件（*.d.ts）的类型检查
+      "strictNullChecks": true,
+      "preserveConstEnums": true,
+      "pretty": true, // 跟踪信息将带有颜色和样式
+      "allowJs": true, // 允许引用普通的js、jsx文件
+      "sourceMap": true,
+      "noImplicitReturns": true,
+      "noUnusedLocals": true,
+      "watch": false, // Run the compiler in watch mode. Watch input files and trigger recompilation on changes.
+    },
+    "exclude": [
+      "build",
+      "dist",
+      ".temp",
+      "node_modules"
+    ]
+  }
