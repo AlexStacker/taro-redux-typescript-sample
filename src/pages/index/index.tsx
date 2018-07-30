@@ -1,4 +1,4 @@
-import Taro, { Component, ComponentClass } from '@tarojs/taro';
+import Taro, { Component } from '@tarojs/taro';
 import { View, Button } from '@tarojs/components';
 import { connect } from '@tarojs/redux';
 
@@ -28,7 +28,7 @@ type PageState = {
 
 type IProps = PageStateProps & PageDispatchProps & PageOwnProps;
 
-@connect<PageStateProps, PageDispatchProps, PageOwnProps>(({ counter }) => ({
+@connect(({ counter }) => ({
   counter
 }), (dispatch) => ({
   add() {
@@ -38,7 +38,6 @@ type IProps = PageStateProps & PageDispatchProps & PageOwnProps;
     dispatch(minus());
   },
   asyncAdd() {
-    // @ts-ignore
     dispatch(asyncAdd());
   }
 }))
@@ -76,8 +75,8 @@ class Index extends Component<PageOwnProps, PageState> {
   }
 }
 
-interface Index {
+declare interface Index {
   props: IProps;
 }
 
-export default Index as ComponentClass<PageOwnProps, PageState>;
+export default Index;
